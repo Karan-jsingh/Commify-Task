@@ -1,0 +1,28 @@
+<div class="theme-toggle">
+  <label class="switch">
+    <input type="checkbox" (change)="toggleTheme($event)" />
+    <span class="slider round"></span>
+  </label>
+</div>
+
+<div class="tax-header">
+  <h1>Income Tax Calculator</h1>
+</div>
+
+<div class="tax-container">
+  <div class="tax-card">
+    <app-salary-form
+      [value]="grossSalary"
+      (salarySubmitted)="onSalarySubmit($event)"
+    />
+  </div>
+
+  <div *ngIf="calculated" class="tax-card">
+    <h3>Calculation Results</h3>
+    <app-tax-summary [result]="taxResult" />
+  </div>
+
+  <div class="tax-actions">
+    <button (click)="resetCalculator()">Reset</button>
+  </div>
+</div>

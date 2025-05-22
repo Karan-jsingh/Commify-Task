@@ -1,0 +1,101 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "TaxCalculatorJaskaranCommify",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/TaxCalculator/calculate": {
+      "post": {
+        "tags": [
+          "TaxCalculator"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaryDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaryDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/IncomeTaxCalculatorResultDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IncomeTaxCalculatorResultDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IncomeTaxCalculatorResultDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "IncomeTaxCalculatorResultDto": {
+        "type": "object",
+        "properties": {
+          "grossAnnualSalary": {
+            "type": "number",
+            "format": "double"
+          },
+          "grossMonthlySalary": {
+            "type": "number",
+            "format": "double"
+          },
+          "netAnnualSalary": {
+            "type": "number",
+            "format": "double"
+          },
+          "netMonthlySalary": {
+            "type": "number",
+            "format": "double"
+          },
+          "annualTaxPaid": {
+            "type": "number",
+            "format": "double"
+          },
+          "monthlyTaxPaid": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalaryDto": {
+        "type": "object",
+        "properties": {
+          "grossSalary": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

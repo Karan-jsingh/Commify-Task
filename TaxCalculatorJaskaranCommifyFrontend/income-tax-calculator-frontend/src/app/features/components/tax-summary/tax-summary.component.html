@@ -1,0 +1,8 @@
+<div *ngIf="result" class="tax-summary">
+    <p><strong>Gross Annual Salary:</strong> £{{ result.grossAnnualSalary }}</p>
+    <p><strong>Gross Monthly Salary:</strong> £{{ result.grossMonthlySalary | number:'1.2-2' }}</p>
+    <p><strong>Net Annual Salary:</strong> £{{ result.netAnnualSalary }}</p>
+    <p><strong>Net Monthly Salary:</strong> £{{ result.netMonthlySalary | number:'1.2-2' }}</p>
+    <p><strong>Annual Tax Paid:</strong> £{{ result.annualTaxPaid }}</p>
+    <p><strong>Monthly Tax Paid:</strong> £{{ result.monthlyTaxPaid | number:'1.2-2' }}</p>
+  </div>

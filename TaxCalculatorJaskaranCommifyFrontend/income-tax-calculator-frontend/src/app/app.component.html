@@ -1,0 +1,22 @@
+<div style="max-width: 500px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+  <h2>Income Tax Calculator</h2>
+
+  <input
+    type="number"
+    [(ngModel)]="grossSalary"
+    placeholder="Enter gross salary"
+    style="width: 100%; padding: 8px;"
+  />
+
+  <button (click)="calculateTax()" style="margin-top: 10px;">Calculate</button>
+
+  <div *ngIf="taxResult" style="margin-top: 20px;">
+    <p><strong>Gross Annual:</strong> {{ taxResult.grossAnnualSalary }}</p>
+    <p><strong>Gross Monthly:</strong> {{ taxResult.grossMonthlySalary }}</p>
+    <p><strong>Net Annual:</strong> {{ taxResult.netAnnualSalary }}</p>
+    <p><strong>Net Monthly:</strong> {{ taxResult.netMonthlySalary }}</p>
+    <p><strong>Annual Tax Paid:</strong> {{ taxResult.annualTaxPaid }}</p>
+    <p><strong>Monthly Tax Paid:</strong> {{ taxResult.monthlyTaxPaid }}</p>
+  </div>
+  
+</div>

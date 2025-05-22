@@ -1,0 +1,89 @@
+
+.tax-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .tax-header {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .tax-header h1 {
+    color: teal;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    transition: color 0.4s ease;
+  }
+  
+  body.dark-mode .tax-header h1 {
+    color: #00d9c0;
+  }
+  
+  .tax-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 2px 8px rgba(0, 128, 128, 0.2);
+    border-radius: 8px;
+    padding: 24px;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  }
+  
+
+  .theme-toggle {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 800px;
+    margin: 20px auto 0;
+    padding: 0 16px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 26px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 0.4s ease;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+  }
+  
+  input:checked + .slider {
+    background-color: teal;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }

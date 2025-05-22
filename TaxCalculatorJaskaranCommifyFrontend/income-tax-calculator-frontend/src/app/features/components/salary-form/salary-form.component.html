@@ -1,0 +1,16 @@
+<div class="form-row">
+    <label for="salaryInput"><strong>Gross Annual Salary:</strong></label>
+    <input
+      id="salaryInput"
+      type="number"
+      [(ngModel)]="value"
+      placeholder="e.g. 40000"
+    />
+    <button
+      (click)="submit()"
+      [disabled]="value <= 0"
+      [class.disabled]="value <= 0"
+    >
+      Calculate
+    </button>
+  </div>

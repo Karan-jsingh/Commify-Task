@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "TaxCalculator.Api.Controllers.TaxCalculatorController",
+    "Method": "Calculate",
+    "RelativePath": "api/TaxCalculator/calculate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "salary",
+        "Type": "TaxCalculatorJaskaranCommify.Core.DTOs.SalaryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TaxCalculatorJaskaranCommify.Core.DTOs.IncomeTaxCalculatorResultDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

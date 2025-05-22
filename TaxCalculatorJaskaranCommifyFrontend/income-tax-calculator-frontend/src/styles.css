@@ -1,0 +1,23 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #ffffff;
+    --card-border: #ccc;
+    --button-bg: teal;
+    --button-text: white;
+  }
+  
+  body.dark-mode {
+    --bg-color: #1e1e1e;
+    --text-color: #f1f1f1;
+    --card-bg: #2c2c2c;
+    --card-border: #444;
+    --button-bg: #009688;
+    --button-text: white;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
